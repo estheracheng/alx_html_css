@@ -1,40 +1,42 @@
-/* Make sure page takes full height */
+/* ===== Base Layout ===== */
 html, body {
   height: 100vh;
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: column; /* Stack header, main, footer vertically */
-  font-family: Arial, sans-serif;
+  flex-direction: column;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f5f5f5;
 }
 
-/* Layout for <main>: article and aside in a row */
 main {
   display: flex;
-  flex-direction: row; /* Place article and aside side by side */
-  flex: auto; /* Take all available vertical space between header and footer */
+  flex-direction: row;
+  flex: 1;
+  min-height: 0; /* Fixes flexbox overflow issue */
 }
 
-/* Content area: takes 2/3 of horizontal space, scrollable if needed */
 article {
   flex: 2;
   overflow-y: auto;
-  padding: 1rem;
-  background-color: #f0f0f0;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: inset 0 0 8px rgba(0,0,0,0.05);
 }
 
-/* Sidebar: takes 1/3 of horizontal space, scrollable if needed */
 aside {
   flex: 1;
   overflow-y: auto;
-  padding: 1rem;
-  background-color: #e0e0e0;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-left: 1px solid #e0e0e0;
 }
 
-/* Header and footer styles */
-header, footer {
-  background-color: #ddd;
-  padding: 1rem;
+/* ===== Header ===== */
+header {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 header ul {
@@ -42,16 +44,146 @@ header ul {
   padding: 0;
   margin: 0;
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  gap: 1.5rem;
 }
 
-header li a {
+.logo {
+  font-size: 2.2rem;
+  margin-right: 0.5rem;
+  color: #f1c40f;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: rotate(15deg);
+}
+
+header a {
+  color: #ecf0f1;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
   text-decoration: none;
-  color: #000;
-  font-weight: bold;
+  transition: all 0.2s ease;
 }
 
+header a:hover {
+  background-color: #f1c40f;
+  color: #2c3e50;
+  transform: translateY(-2px);
+}
+
+/* ===== Footer ===== */
 footer {
+  background: linear-gradient(135deg, #34495e, #2c3e50);
+  color: #ecf0f1;
+  padding: 1.2rem;
   text-align: center;
-  background-color: #ccc;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #f1c40f;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* ===== Content Styles ===== */
+article h1 {
+  color: #2c3e50;
+  border-bottom: 2px solid #f1c40f;
+  padding-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+article h2 {
+  color: #3498db;
+  margin-top: 1.5rem;
+}
+
+article h3 {
+  color: #2980b9;
+}
+
+/* ===== Table Styles ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  background-color: #fff;
+}
+
+th {
+  background-color: #3498db;
+  color: white;
+  padding: 0.8rem 1rem;
+  text-align: left;
+}
+
+td {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+tr:hover {
+  background-color: #ebf5fb;
+}
+
+/* ===== Tweet Styles ===== */
+blockquote.twitter-tweet {
+  background: #f8f9fa;
+  border-left: 4px solid #3498db;
+  padding: 1.2rem;
+  margin: 1.5rem 0;
+  border-radius: 0 4px 4px 0;
+  font-style: italic;
+}
+
+/* ===== Image Styles ===== */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* ===== Responsive Styles ===== */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+  
+  aside {
+    border-left: none;
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  header ul {
+    gap: 1rem;
+  }
+  
+  article, aside {
+    padding: 1.5rem;
+  }
 }
