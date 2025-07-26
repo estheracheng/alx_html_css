@@ -14,3 +14,12 @@ a {
   color: #3498db;
   text-decoration: none;
 }
+.works_on_smartphone main {
+  flex-direction: column;
+}
+
+.works_on_smartphone article,
+.works_on_smartphone aside {
+  flex: auto;
+  width: 100%;
+}
