@@ -1,0 +1,57 @@
+/* Make sure page takes full height */
+html, body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* Stack header, main, footer vertically */
+  font-family: Arial, sans-serif;
+}
+
+/* Layout for <main>: article and aside in a row */
+main {
+  display: flex;
+  flex-direction: row; /* Place article and aside side by side */
+  flex: auto; /* Take all available vertical space between header and footer */
+}
+
+/* Content area: takes 2/3 of horizontal space, scrollable if needed */
+article {
+  flex: 2;
+  overflow-y: auto;
+  padding: 1rem;
+  background-color: #f0f0f0;
+}
+
+/* Sidebar: takes 1/3 of horizontal space, scrollable if needed */
+aside {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  background-color: #e0e0e0;
+}
+
+/* Header and footer styles */
+header, footer {
+  background-color: #ddd;
+  padding: 1rem;
+}
+
+header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+header li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  background-color: #ccc;
+}
