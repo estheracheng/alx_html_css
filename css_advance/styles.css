@@ -1,0 +1,265 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header */
+header {
+  background-image:var(--bg-hero) url('../images/Object.png');
+  color: var(--text-light);
+  border-bottom: 1px solid #eee;
+  padding: 20px 40px;
+  position: relative;
+  text-align: center;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav img {
+  height: 40px;
+}
+
+header nav ul {
+  display: flex;
+  gap: 30px;
+}
+
+header nav ul li a {
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #ff4d4d;
+}
+
+/* Hero Section */
+main section:first-of-type {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to bottom right, #fdf2f2, #ffeaea);
+}
+
+main section:first-of-type h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+main section:first-of-type span {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ff4d4d;
+}
+
+main section:first-of-type button {
+  margin-top: 20px;
+  background-color: #ff4d4d;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+main section:first-of-type button:hover {
+  background-color: #e63e3e;
+}
+
+/* Learn from the pros */
+main section:first-of-type > div:last-of-type {
+  margin-top: 60px;
+}
+
+main section:first-of-type h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+main section:first-of-type > div:last-of-type > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+main section:first-of-type > div:last-of-type div div {
+  text-align: center;
+  width: 180px;
+}
+
+/* Testimonial Section */
+main section:nth-of-type(2) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  padding: 60px 20px;
+  background-color: #fefefe;
+  justify-content: center;
+}
+
+main section:nth-of-type(2) blockquote {
+  font-style: italic;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* Popular Tutorials */
+main section:nth-of-type(3) {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+main section:nth-of-type(3) h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+main section:nth-of-type(3) > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+main section:nth-of-type(3) > div {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  width: 250px;
+  text-align: left;
+}
+
+main section:nth-of-type(3) h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+main section:nth-of-type(3) div div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fa-star {
+  color: #fdd835;
+}
+
+/* Membership Section */
+main section:nth-of-type(4) {
+  padding: 60px 20px;
+  background-color: #fff3f3;
+  text-align: center;
+}
+
+main section:nth-of-type(4) h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+main section:nth-of-type(4) > div {
+  display: inline-block;
+  margin: 0 15px 30px;
+  width: 200px;
+}
+
+main section:nth-of-type(4) h3 {
+  margin-top: 15px;
+}
+
+main section:nth-of-type(4) button {
+  margin-top: 20px;
+  background-color: #ff4d4d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* FAQ Section */
+main section:nth-of-type(5) {
+  padding: 60px 20px;
+  background-color: #fdfdfd;
+}
+
+main section:nth-of-type(5) h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+main section:nth-of-type(5) > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+main section:nth-of-type(5) h3 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+footer img {
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+footer i {
+  margin: 0 10px;
+  font-size: 1.2rem;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+footer i:hover {
+  color: #ff4d4d;
+}
+
+footer p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
